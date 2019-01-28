@@ -12,7 +12,10 @@ class User:
 
 class Credentials:
     accounts_list = []
-    def __init__(self, account_name, user_name, pass):
+    def __init__(self, account_name, user_name, key):
         self.account_name = account_name
         self.user_name = user_name
-        self.pass = pass
+        self.key = key
+
+    def save_account(self):
+            Credentials.accounts_list.append(self)

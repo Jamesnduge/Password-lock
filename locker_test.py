@@ -10,13 +10,14 @@ class TestLocker(unittest.TestCase):
         unittest.TestCase: TestCase class that helps in creating test cases
     '''
     def tearDown(self):
-            '''
-            tearDown method that does clean up after each test case has run.
-            '''
-            User.users_list = []
+        '''
+        tearDown method to clean up after each test case has run.
+        '''
+        User.users_list = []
 
-        def save_user(self):
-            User.users_list.append(self)
+    def save_user(self):
+        User.users_list.append(self)
+        
     def setUp(self):
         '''
         Set up method to run before each test cases.
@@ -39,7 +40,16 @@ class TestLocker(unittest.TestCase):
         self.new_user.save_user()
         self.assertEqual(len(User.users_list),1)
 
-    
+    def test_save_multiple_users(self):
+            '''
+            test_save_multiple_users to check if we can save multiple users
+            objects to our users_list
+            '''
+            self.new_user.save_user()
+            test_user = User("Test","unlock")
+            test_user.save_user()
+            self.assertEqual(len(User.users_list),2)
+
 
 if __name__ == '__main__':
     unittest.main()
