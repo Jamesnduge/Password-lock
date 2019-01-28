@@ -15,6 +15,9 @@ class TestLocker(unittest.TestCase):
             '''
             User.users_list = []
 
+        def save_user(self):
+            User.users_list.append(self)
+
 
 if __name__ == '__main__':
     unittest.main()
