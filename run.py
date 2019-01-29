@@ -18,3 +18,8 @@ def create_account(account_name, user_name, key):
     '''
     new_account = Credentials(account_name, user_name, key)
     return new_account
+def save_account(new_account):
+    '''
+    Function to save an account
+    '''
+    new_account.save_account()
