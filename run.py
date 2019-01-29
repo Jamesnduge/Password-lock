@@ -107,6 +107,12 @@ def main():
                                     print("You dont seem to have any accounts saved yet")
                                     print('\n')
 
+                    elif short_code = 'ex':
+                        print("Bye...")
+                        break
+                    else:
+                        print("Please use the provided shortcodes")
+
 
 if __name__ == '__main__':
 
