@@ -7,24 +7,35 @@ def create_user(username,password):
     '''
     new_user = User(username,password)
     return new_user
+
 def save_user(new_user):
     '''
     Function to save user
     '''
     new_user.save_user()
+
 def create_account(account_name, user_name, key):
     '''
     Function to create a new account
     '''
     new_account = Credentials(account_name, user_name, key)
     return new_account
+
 def save_account(new_account):
     '''
     Function to save an account
     '''
     new_account.save_account()
+
 def remove_account(contact):
     '''
     Function to delete a contact
     '''
     contact.delete_account()
+
+def display_accounts():
+    '''
+    Function that returns all the saved accounts
+    '''
+    return Contact.display_contacts()
+    
