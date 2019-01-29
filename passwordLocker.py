@@ -40,3 +40,4 @@ class Credentials:
         method that returns the accounts list
         '''
         return cls.accounts_list
+    
