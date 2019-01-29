@@ -23,3 +23,8 @@ def save_account(new_account):
     Function to save an account
     '''
     new_account.save_account()
+def remove_account(contact):
+    '''
+    Function to delete a contact
+    '''
+    contact.delete_account()
