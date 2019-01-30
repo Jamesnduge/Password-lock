@@ -1,4 +1,4 @@
-# Password-Locker🔒
+## Password-Lock  🔒
 ### CREATED BY  James Mwangi Nduge
 
 ----------------------------------------------------------------------
@@ -19,7 +19,7 @@ Atom Text Editor
 ## Behaviour driven Development (BDD)
 |Behaviour         |  Specification |         
 |------------------|-------------------|
-| enter credentials| credentials outputted                  |
+| enter credentials| credentials outputted and saved                 |
 
 
 ---------------------------------------------------------------------------------
@@ -28,12 +28,12 @@ Atom Text Editor
 To use the application on the web follow the outlined steps:
 1. Visit the following page https://github.com/Jamesnduge/Password-lock.git
 2. clone the repository
-3. make sure you install the python requirements and then run "python3.7 run.py" command
+3. make sure you install the python requirements and then run "./run.py" command
 
 ---------------------------------------------------------------------
 
 ## Known bugs
-There are no Known bugs. If any bug seen, report to, jmaes_mwangi@aol.com
+There are no Known bugs. If any bug seen, report to, james_mwangi@aol.com
 
 ## Support or contribution instructions
 If you may require to help improve the application, contact the author at: james_mwangi@aol.com
