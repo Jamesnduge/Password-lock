@@ -63,7 +63,7 @@ def main():
             print('\n')
 
             while True:
-                    print("Use these short codes : new - Create new Credentials, disp - Display all accounts, del - Delete an existing account, ex -Exit the credentials list ")
+                    print("Use these short codes : new - Create new Credentials, disp - Display all accounts, ex -Exit the credentials list ")
 
                     short_code = input().lower()
 
@@ -107,7 +107,7 @@ def main():
                                     print("You dont seem to have any accounts saved yet")
                                     print('\n')
 
-                    elif short_code = 'ex':
+                    elif short_code == 'ex':
                         print("Bye...")
                         break
                     else:
