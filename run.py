@@ -29,11 +29,13 @@ def save_account(new_account):
     '''
     new_account.save_account()
 
-def remove_account(new_account):
-    '''
-    Function to delete a contact
-    '''
-    new_account.delete_account()
+def generate_password():
+	'''
+	Function to generate a password automatically
+	'''
+	gen_pass = Credentials.generate_password(8)
+	return gen_pass
+
 
 def display_accounts():
     '''
@@ -52,20 +54,20 @@ def main():
     print('\n')
 
     while True:
-        print("Enter 'ok' to continue:")
-        proceed = input().lower()
+        print("Enter 'ok' to continue or 'exit' to exit app:")
+        proceed = input().lower().strip()
 
-        if proceed != 'ok':
+        if proceed == 'exit':
             print("Exited account")
             break
-        else:
+        elif proceed == 'ok':
             print(f"Hello {username}. what would you like to do?")
             print('\n')
 
             while True:
                     print("Use these short codes : new - Create new Credentials, disp - Display all accounts, ex -Exit the credentials list ")
 
-                    short_code = input().lower()
+                    short_code = input().lower().strip()
 
                     if short_code == 'new':
                             print("New Account")
@@ -76,21 +78,20 @@ def main():
 
                             print("Enter Username ...")
                             user_name = input()
-
-                            print("Enter password or use 'generate' to get random password...")
-                            ke = input().lower()
-                            if ke == 'generate':
-                                def generatePassword(num):
-                                    key = ""
-
-                                    for n in range(num):
-                                        x = random.randint(10,34)
-                                        key += string.printable[x]
-                                    return key
-                                print (generatePassword(8))
-                                save_account(create_account(account_name, user_name, key))
-                            else:
-                                save_account(create_account(account_name, user_name, key))
+                            while True:
+                                print("Use 'create' keyword for existing password or use 'generate' to get random password...")
+                                ke = input().lower().strip()
+                                if ke == 'generate':
+                                    key = generate_password()
+                                    print(f"Your password for {account_name} is {key}")
+                                    break
+                                elif ke == 'create':
+                                    print("Enter a prefered password:")
+                                    key = input()
+                                    break
+                                else:
+                                    print("Oops! Please use a correct keyword('create' or 'generate')")
+                            save_account(create_account(account_name, user_name, key))
 
                     elif short_code == 'disp':
 
@@ -112,7 +113,8 @@ def main():
                         break
                     else:
                         print("Please use the provided shortcodes")
-
+        else:
+            print("Please choose action!")
 
 if __name__ == '__main__':
 
