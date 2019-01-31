@@ -17,10 +17,13 @@ Atom Text Editor
 -----------------------------------------------------------------------------
 
 ## Behaviour driven Development (BDD)
-|Behaviour         |  Specification |         
-|------------------|-------------------|
-| enter credentials| credentials outputted and saved                 |
-
+|Behaviour         |  Input |  Output  |       
+|------------------|---------|-----------|
+|Ask user for credentials| username,password | Welcome message with inputted name|
+| Ask user to continue into account created               | "ok" or else | Prompt user to select a short-code |
+|Navigate through app options | short-code "new" | prompt user to enter account-name and username for that account|
+|| short-code "disp" | All created credentials(credentials list) |
+|| short-code "ex" | Exit message |
 
 ---------------------------------------------------------------------------------
 
