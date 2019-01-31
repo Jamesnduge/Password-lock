@@ -22,8 +22,22 @@ Atom Text Editor
 |Ask user for credentials| username,password | Welcome message with inputted name|
 | Ask user to continue into account created               | "ok" or else | Prompt user to select a short-code |
 |Navigate through app options | short-code "new" | prompt user to enter account-name and username for that account|
+|Generate password| Keyword 'generate'| A randomly compiled 8-character password|
 || short-code "disp" | All created credentials(credentials list) |
 || short-code "ex" | Exit message |
+
+---------------------------------------------------------------------------------
+|             Pseudocode                            |
+|---------------------------------------------------|
+|* create passwordLocker.py file
+|* create locker_test.py
+|*  use _ __init__ _ to define parameters of the objects
+|* Test initialisation using  test_init(self)  method
+|* add save_user() method and test it using test_save_user(self)
+|* add save_account() method and test it using test_save_account(self)
+|* add display_accounts() method and test it using test_display_all_accounts(self)
+|* add generate_password() method and test it using test_gen_password()   
+
 
 ---------------------------------------------------------------------------------
 
