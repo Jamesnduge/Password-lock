@@ -1,3 +1,5 @@
+import random
+import string
 class User:
     users_list = []
     """
@@ -12,6 +14,13 @@ class User:
 
     def save_user(self):
         User.users_list.append(self)
+    @classmethod
+    def display_users(cls):
+        '''
+        method that returns the accounts list
+        '''
+        return cls.users_list
+
 
 
 
@@ -31,8 +40,14 @@ class Credentials:
     def save_account(self):
         Credentials.accounts_list.append(self)
 
-    def delete_account(self):
-        Credentials.accounts_list.remove(self)
+    def generate_password(num):
+        gen_pass = ""
+        num = 8
+
+        for n in range(num):
+            x = random.randint(10,34)
+            gen_pass += string.printable[x]
+        return gen_pass
 
     @classmethod
     def display_accounts(cls):
@@ -40,4 +55,3 @@ class Credentials:
         method that returns the accounts list
         '''
         return cls.accounts_list
-    
